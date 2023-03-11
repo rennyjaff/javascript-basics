@@ -13,7 +13,7 @@ const getProperty = (property, object) => {
 };
 
 const hasProperty = (property, object) => {
-  return object.hasOwnProperty(property);
+  return !!object[property];
 };
 
 const isOver65 = person => {
@@ -21,8 +21,7 @@ const isOver65 = person => {
 };
 
 const getAges = people => {
-  const ageArray = people.map(person => person.age);
-  return ageArray;
+  return people.map(person => person.age);
 };
 
 const findByName = (name, people) => {
@@ -34,16 +33,15 @@ const findHondas = cars => {
 };
 
 const averageAge = people => {
-  const ageArr = people.map(person => person.age)
-  const averageAge = ageArr.reduce((a, b) => (a + b));
-  return averageAge / people.length;
+  const ageArr = people.map(person => person.age).reduce((a, b) => a + b);
+  return ageArr / people.length;
 };
 
 const createTalkingPerson = (name, age) => {
   return {
-    name: name,
-    age: age,
-    introduce(friend){ 
+    name,
+    age,
+    introduce(friend) {
       return `Hi ${friend}, my name is ${this.name} and I am ${this.age}!`;
     }
   }
