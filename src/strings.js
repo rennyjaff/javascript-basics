@@ -1,5 +1,5 @@
 function sayHello (string) {
-  return 'Hello, ' + string + '!';
+  return `Hello, ${  string  }!`;
 };
 
 function uppercase (string) {
@@ -15,7 +15,7 @@ function countCharacters (string) {
 };
 
 function firstCharacter (string) {
-return string.charAt(0);
+  return string.charAt(0);
 };
 
 function firstCharacters (string, n) {

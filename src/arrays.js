@@ -11,7 +11,7 @@ const csvStringToArray = string => {
 };
 
 const addToArray = (element, array) => {
- array.push(element);
+  array.push(element);
 };
 
 const addToArray2 = (element, array) => {
@@ -36,9 +36,6 @@ const reverseWordsInArray = strings => {
       .split('')
       .reverse()
       .join('')
-      .split(' ')
-      .reverse()
-      .join(' ')
   );
 };
 
@@ -53,23 +50,12 @@ const removeNthElement2 = (index, array) => {
 }
 
 const elementsStartingWithAVowel = strings => {
-  return strings.filter(
-    string =>
-      string.startsWith('a') ||
-      string.startsWith('e') ||
-      string.startsWith('i') ||
-      string.startsWith('o') ||
-      string.startsWith('u') ||
-      string.startsWith('A') ||
-      string.startsWith('E') ||
-      string.startsWith('I') ||
-      string.startsWith('O') ||
-      string.startsWith('U')
-  );
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  return strings.filter(string => vowels.includes(string[0].toLowerCase()));
 };
 
 const removeSpaces = string => {
-  return string.replaceAll(' ', '');
+  return string.split(' ').join('');
 };
 
 const sumNumbers = numbers => {
