@@ -44,7 +44,7 @@ const createTalkingPerson = (name, age) => {
     introduce(friend) {
       return `Hi ${friend}, my name is ${this.name} and I am ${this.age}!`;
     }
-  }
+  };
 };
 
 module.exports = {

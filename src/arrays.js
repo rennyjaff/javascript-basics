@@ -1,10 +1,10 @@
 const getNthElement = (index, array) => {
-  return array[index % array.length]};
-
+  return array[index % array.length];
+};
 
 const arrayToCSVString = array => {
   return array.toString();
-}
+};
 
 const csvStringToArray = string => {
   return string.split(',');
@@ -47,7 +47,7 @@ const removeNthElement2 = (index, array) => {
   const arr = array.slice();
   arr.splice(index, 1);
   return arr;
-}
+};
 
 const elementsStartingWithAVowel = strings => {
   const vowels = ['a', 'e', 'i', 'o', 'u'];

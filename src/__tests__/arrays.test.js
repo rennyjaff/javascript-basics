@@ -240,8 +240,11 @@ describe('sortByLastLetter', () => {
     expect(
       sortByLastLetter(['Lannister', 'Stark', 'Greyjoy', 'Targaryen'])
     ).toEqual(['Stark', 'Targaryen', 'Lannister', 'Greyjoy']);
-    expect(
-      sortByLastLetter(['Mo', 'Romy', 'Miguel', 'Martyna'])
-    ).toEqual(['Martyna', 'Miguel', 'Mo', 'Romy']);
+    expect(sortByLastLetter(['Mo', 'Romy', 'Miguel', 'Martyna'])).toEqual([
+      'Martyna',
+      'Miguel',
+      'Mo',
+      'Romy'
+    ]);
   });
 });
